@@ -1,5 +1,5 @@
 ![The Cocktail logo][tcklogo] ❤ ![Karumi logo][karumilogo]
-# Kata Maxibon for Elixir. [![Build Status](https://travis-ci.org/nando/MaxibonKataElixir.svg?branch=master)](https://travis-ci.org/nando/MaxibonKataElixir)
+# Kata Maxibon for Elixir. [![Build Status](https://travis-ci.org/nando/maxibon_kata_elixir.svg?branch=master)](https://travis-ci.org/nando/maxibon_kata_elixir)
 
 - We are here to practice [property based testing][property-based-testing].
 - We are going to use [StreamData][stream_data] to write our tests.
