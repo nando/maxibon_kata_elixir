@@ -4,7 +4,8 @@ defmodule MaxibonKataElixir do
       maxibons_left: 10 ]
   end
 
-  def developer( name ) do
-    [ name: name ]
+  def developer( name, maxibons_to_grab \\ 0 ) do
+    [ name: name,
+      maxibons_to_grab: max( 0, maxibons_to_grab ) ]
   end
 end
