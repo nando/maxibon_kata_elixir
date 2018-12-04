@@ -8,4 +8,8 @@ defmodule MaxibonKataElixir do
     [ name: name,
       maxibons_to_grab: max( 0, maxibons_to_grab ) ]
   end
+
+  def open_fridge( office, _developer ) do
+    office
+  end
 end
