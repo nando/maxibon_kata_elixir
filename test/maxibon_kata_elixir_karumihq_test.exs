@@ -6,7 +6,7 @@ defmodule MaxibonKataElixirKarumiHQTest do
 
   property "should start the day with 10 maxibons" do
     check all office <- TestHelper.karumi_hq_generator() do
-      assert office[ :maxibons_left ] == 10
+      assert office.maxibons_left == 10
     end
   end
 
@@ -14,7 +14,7 @@ defmodule MaxibonKataElixirKarumiHQTest do
     check all office <- TestHelper.karumi_hq_generator(),
               developer <- TestHelper.karumi_developer_generator() do
       office = MaxibonKataElixir.open_fridge( office, developer )
-      assert office[ :maxibons_left ] > 2
+      assert office.maxibons_left > 2
     end
   end
 end
