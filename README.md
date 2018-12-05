@@ -1,5 +1,5 @@
 ![The Cocktail logo][tcklogo] ❤ ![Karumi logo][karumilogo]
-# Kata Maxibon for Elixir. [![Build Status](https://travis-ci.org/nando/maxibon_kata_elixir.svg?branch=master)](https://travis-ci.org/nando/maxibon_kata_elixir)
+# Kata Maxibon for Elixir. [![Build Status](https://travis-ci.com/nando/maxibon_kata_elixir.svg?branch=master)](https://travis-ci.com/nando/maxibon_kata_elixir)
 
 - We are here to practice [property based testing][property-based-testing].
 - We are going to use [StreamData][stream_data] to write our tests.
@@ -36,7 +36,7 @@ When a Karumi engineer goes to the kitchen, they can go in group if needed, and 
 Your task as Elixir Developer is to resolve this problem or test an already implemented software, depending on the path you have choosen before to start.
 
 * If you want to practice TDD write a little piece of software to implement the already described scenario following the TDD cycle.
-* If you don not want to follow the TDD path create an empty project, add the [Rantly][rantly] gem as a dependency and start writing code. 
+* If you don not want to follow the TDD path create an empty project, add the [Rantly][rantly] gem as a dependency and start writing code.
 * If you prefer to just learn how to use [property based testing][property-based-testing] you can use this repository just checkout to the branch ``write-tests``.
 
 ## Extra tasks:
@@ -70,4 +70,3 @@ limitations under the License.
 [stream_data]: https://hexdocs.pm/stream_data/StreamData.html
 [maxibon]: ./art/maxibon.jpg
 [tdd]: https://en.wikipedia.org/wiki/Test-driven_development
-
