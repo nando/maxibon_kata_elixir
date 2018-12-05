@@ -12,7 +12,7 @@ defmodule MaxibonKataElixirDeveloperTest do
 
   property "should assign the name of the developer in 'construction'" do
     check all name <- StreamData.string( :alphanumeric, min_length: 3 ),
-              developer = MaxibonKataElixir.developer( name ) do
+              developer = MaxibonKataElixir.Developer.new( name ) do
       assert developer.name == name
     end
   end
