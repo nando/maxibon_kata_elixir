@@ -12,7 +12,7 @@ defmodule TestHelper do
     gen all name <- string( :alphanumeric,
                             min_length: 3 ),
             maxibons_to_grab <- integer() do
-          MaxibonKataElixir.Developer.new( name, maxibons_to_grab )
+          MaxibonKataElixir.Developer.map( name, maxibons_to_grab )
         end
   end
 
@@ -20,7 +20,7 @@ defmodule TestHelper do
     gen all name <- string( :alphanumeric,
                             min_length: 3 ),
             maxibons_to_grab <- integer( 0..12 ) do
-          MaxibonKataElixir.Developer.new( name, maxibons_to_grab )
+          MaxibonKataElixir.Developer.map( name, maxibons_to_grab )
         end
   end
 end
