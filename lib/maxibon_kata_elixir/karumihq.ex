@@ -1,6 +1,9 @@
 defmodule MaxibonKataElixir.KarumiHQ do
   @min_maxibons 3
+  def min_maxibons, do: @min_maxibons
+
   @maxibons_to_buy 10
+  def maxibons_to_buy, do: @maxibons_to_buy
 
   def office( office_name ) do
     %{ name: office_name,
