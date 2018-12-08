@@ -5,9 +5,16 @@ defmodule MaxibonKataElixir.KarumiHQ do
   @maxibons_to_buy 10
   def maxibons_to_buy, do: @maxibons_to_buy
 
-  def office( office_name ) do
-    %{ name: office_name,
-       maxibons_left: 10 }
+  def office( office_name, chat \\ nil) do
+    if chat do
+      %{ name: office_name,
+         maxibons_left: 10,
+         chat: chat,
+         message_sent: nil }
+    else
+      %{ name: office_name,
+         maxibons_left: 10 }
+    end
   end
 
   def buy_maxibons?( office ) do

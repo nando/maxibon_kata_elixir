@@ -1,3 +1,6 @@
+Mox.defmock MaxibonKataElixir.ChatMock,
+            for: MaxibonKataElixir.ChatBehaviour
+
 defmodule TestHelper do
   use ExUnitProperties
 
@@ -5,6 +8,13 @@ defmodule TestHelper do
     gen all name <- string( :alphanumeric,
                             min_length: 8 ) do
           MaxibonKataElixir.KarumiHQ.office( name )
+        end
+  end
+
+  def karumi_hq_with_chat_generator do
+    gen all name <- string( :alphanumeric,
+                            min_length: 8 ) do
+          MaxibonKataElixir.KarumiHQ.office( name, MaxibonKataElixir.ChatMock )
         end
   end
 

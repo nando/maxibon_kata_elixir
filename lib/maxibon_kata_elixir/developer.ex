@@ -9,7 +9,14 @@ defmodule MaxibonKataElixir.Developer do
                      max( 0, office.maxibons_left - developer.maxibons_to_grab ))
 
     if MaxibonKataElixir.KarumiHQ.buy_maxibons?( office ) do
-      MaxibonKataElixir.KarumiHQ.buy_maxibons( office )
+      if office[ :chat ] do
+        msg = "Hi guys, I'm " <> developer.name <> ". We need more maxibons!"
+        office = put_in office.message_sent,
+                        office.chat.sendMessage( msg )
+        MaxibonKataElixir.KarumiHQ.buy_maxibons office
+      else
+        MaxibonKataElixir.KarumiHQ.buy_maxibons office
+      end
     else
       office
     end
