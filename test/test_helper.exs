@@ -42,6 +42,14 @@ defmodule TestHelper do
         end
   end
 
+  def not_so_hungry_developer_generator do
+    gen all name <- string( :alphanumeric,
+                            min_length: 3 ),
+            maxibons_to_grab <- integer( 0..2 ) do
+          MaxibonKataElixir.Developer.map( name, maxibons_to_grab )
+        end
+  end
+
   def calculate_maxibons_left( initial_maxibons, developer ) do
     maxibons_left = max( 0, initial_maxibons - developer.maxibons_to_grab )
     if maxibons_left < MaxibonKataElixir.KarumiHQ.min_maxibons do
