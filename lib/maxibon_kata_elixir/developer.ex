@@ -1,4 +1,16 @@
 defmodule MaxibonKataElixir.Developer do
+  @karumies %{
+    pedro: 3,
+    fran: 1,
+    davide: 0,
+    sergio: 2,
+    jorge: 1
+  }
+
+  def karumies do
+    @karumies
+  end
+
   def map( name, maxibons_to_grab \\ 0 ) do
     %{ name: name,
        maxibons_to_grab: max( 0, maxibons_to_grab ) }
