@@ -50,6 +50,18 @@ defmodule TestHelper do
         end
   end
 
+  def karumies_group_generator do
+    gen all name1 <- string( :alphanumeric,
+                            min_length: 3 ),
+            maxibons_to_grab1 <- integer( 0..12 ),
+            name2 <- string( :alphanumeric,
+                            min_length: 3 ),
+            maxibons_to_grab2 <- integer( 0..12 ) do
+          [ MaxibonKataElixir.Developer.map( name1, maxibons_to_grab1 ),
+            MaxibonKataElixir.Developer.map( name2, maxibons_to_grab2 ) ]
+        end
+  end
+
   def calculate_maxibons_left( initial_maxibons, developer ) do
     maxibons_left = max( 0, initial_maxibons - developer.maxibons_to_grab )
     if maxibons_left < MaxibonKataElixir.KarumiHQ.min_maxibons do

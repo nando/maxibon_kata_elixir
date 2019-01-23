@@ -49,4 +49,12 @@ defmodule MaxibonKataElixirTest do
       assert office.message_sent == nil
     end
   end
+
+  property "should always has more than two maxibons in the fridge even if some karumies grab maxibons in group" do
+    check all office <- TestHelper.karumi_hq_generator(),
+              developers <- TestHelper.karumies_group_generator() do
+      office = MaxibonKataElixir.open_fridge( office, developers )
+      assert office.maxibons_left > 2
+    end
+  end
 end
