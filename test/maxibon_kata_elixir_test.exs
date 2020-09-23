@@ -9,7 +9,7 @@ defmodule MaxibonKataElixirTest do
   # Make sure mocks are verified when the test exits
   setup :verify_on_exit!
 
-  property "should always has more than two maxibons in the fridge" do
+  property "should always have more than two maxibons in the fridge" do
     check all office <- TestHelper.karumi_hq_generator(),
               developer <- TestHelper.karumi_developer_generator() do
       office = MaxibonKataElixir.open_fridge( office, developer )
